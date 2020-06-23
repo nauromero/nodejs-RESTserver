@@ -1,9 +1,5 @@
 const jwt = require('jsonwebtoken');
 
-//
-// Verificar token
-//
-
 let verificaToken = (req, res, next) => {
 	let token = req.get('token');
 	jwt.verify(token, process.env.SEED, (err, decoded) => {
@@ -17,10 +13,6 @@ let verificaToken = (req, res, next) => {
 		next();
 	});
 };
-
-//
-// Verificar ADMIN_ROLE
-//
 
 let verificaAdminRole = (req, res, next) => {
 	let usuario = req.usuario;
