@@ -2,7 +2,7 @@ const express = require('express');
 const { verificaToken } = require('../middlewares/autenticacion');
 
 const app = express();
-const { Producto } = require('../models/producto');
+const Producto = require('../models/producto');
 const Usuario = require('../models/usuario');
 const Categoria = require('../models/categoria');
 
